@@ -1,0 +1,6 @@
+Matplotlib created a temporary cache directory at /tmp/matplotlib-__pzb178 because the default path (/home/dfox/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Matplotlib is building the font cache; this may take a moment.
+Traceback (most recent call last):
+  File "/share/foxlab-backedup/RDC/python/rdc//rdc/run_single_subj.py", line 35, in <module>
+    fmri_data = nib.load(fmri_files_dict[0])
+KeyError: 0

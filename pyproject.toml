@@ -1,0 +1,73 @@
+[project]
+name = "rdc"
+version = "0.0.1"
+description = "Analysis of fMRI data in collaboration with Shackman lab at UMD in a threat anticipation task. "
+authors = [{name = "Foxlab", email="dfox@ucdavis.edu"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+dependencies = [
+  "pip",
+  "numpy",
+  "pandas",
+  "pyarrow",
+  "matplotlib",
+  "seaborn",
+  "scikit-learn",
+  "notebook",
+  "torch",
+  ]
+
+
+[project.urls]
+repository = "https://github.com/foxlab-ucdavis/rdc"
+
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = [
+  # pycodestyle
+  "E",
+  "W",
+  # pyflakes
+  "F",
+  # pylint
+  "PL",
+  # isort
+  "I",
+  # flake8-bugbear
+  "B",
+  # flake8-simplify
+  "SIM",
+  # flake8-comprehensions
+  "C4",
+  # ruff
+  "RUF",
+]
+fixable = ["ALL"]
+ignore = [
+  # too many arguments
+  "PLR0913",
+  # magic number
+  "PLR2004",
+  # line too long
+  "E501",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["E402", "F401", "D104"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
